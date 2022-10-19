@@ -1,0 +1,34 @@
+[ {
+  "id" : "bcdca62d-3fac-ec26-7590-9d9357f4b439",
+  "name" : "image_field",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : true,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://23132125.fs1.hubspotusercontent-na1.net/hubfs/23132125/png-clipart-testng-logo-software-testing-software-framework-computer-icons-automation-testing-angle-text-removebg-preview-removebg-preview.png",
+    "alt" : "png-clipart-testng-logo-software-testing-software-framework-computer-icons-automation-testing-angle-text-removebg-preview-removebg-preview",
+    "loading" : "lazy",
+    "width" : 633,
+    "height" : 197,
+    "max_width" : 633,
+    "max_height" : 197
+  }
+}, {
+  "id" : "0136f2a2-2db0-4a4c-da0e-3e69ad64dca9",
+  "name" : "text_field",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : true,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "My site name"
+} ]

@@ -1,0 +1,99 @@
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+{% if module.show_carousel %}
+<div class="mainheading">
+  <h3>
+    {{ module.carousel_heading }}
+  </h3>
+</div>
+      <section class="customer-logos slider">     
+       {% for item in module.field_group %}
+       <div class="slide">
+          {% if item.slide_image.src %}
+            {% set sizeAttrs = 'width="{{ item.slide_image.width }}" height="{{ item.slide_image.height }}"' %}
+            {% if item.slide_image.size_type == 'auto' %}
+              {% set sizeAttrs = 'width="{{ item.slide_image.width }}" height="{{ item.slide_image.height }}" style="max-width: 100%; height: auto;"' %}
+            {% elif item.slide_image.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ item.slide_image.max_width }}" height="{{ item.slide_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+             {% set loadingAttr = item.slide_image.loading != 'disabled' ? 'loading="{{ item.slide_image.loading }}"' : '' %}
+             <div class="carouselimage">
+                <img src="{{ item.slide_image.src }}" alt="{{ item.slide_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+             </div>   
+          {% endif %}
+          <div class="carouseltext">
+            {% inline_text field="text_field" value="{{ item.text_field }}" %}
+            <div class="subpara">
+              {% inline_text field="carousel_sub_heading" value="{{ item.carousel_sub_heading }}" %}
+            </div>
+          </div>
+       </div>
+        {% endfor %} 
+        </section>
+    {% else %}
+
+<div class="mainheading not-carousel">
+  <h3>
+   {{ module.card_heading }}
+  </h3>
+</div>
+<div class="row">
+    {% for item in module.card_group %}
+      
+        <div class="col-lg-2 col-md-4 col-xs-6">
+        {% if item.card_image.src %}
+          {% set sizeAttrs = 'width="{{ item.card_image.width }}" height="{{ item.card_image.height }}"' %}
+          {% if item.card_image.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ item.card_image.width }}" height="{{ item.card_image.height }}" style="max-width: 100%; height: auto;"' %}
+          {% elif item.card_image.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ item.card_image.max_width }}" height="{{ item.card_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+           {% set loadingAttr = item.card_image.loading != 'disabled' ? 'loading="{{ item.card_image.loading }}"' : '' %}
+        <div class="carouselimage">
+            <img src="{{ item.card_image.src }}" alt="{{ item.card_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        </div>
+          {% endif %}
+        <div class="carouseltext">
+        {% inline_text field="card_text" value="{{ item.card_text }}" %}
+         <div class="subpara">
+            {% inline_text field="card_sub_heading" value="{{ item.card_sub_heading }}" %}
+          </div>
+        </div>
+        </div>
+     {% endfor %}
+      </div>
+      
+    
+
+{% endif %}
+
+
+
+
+
+<script>
+$(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: {{ module.slide_to_show }},
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1800,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 769,
+            settings: {
+                slidesToShow: {{ module.slide_to_show_for_tablet }}
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: {{ module.slide_to_show_for_mobile }}
+            }
+        }]
+    });
+});
+</script>

@@ -1,0 +1,537 @@
+$color_1: {{ form_title_font_color;
+$color_2: {{ form_label_font_color;
+$color_3: {{ form_help_text_font_color;
+$color_4: {{ form_field_placeholder_color;
+$color_5: {{ primary_color;
+$color_6: {{ nav_font_color;
+$color_7: {{ color_variant(nav_font_color, -40);
+$color_8: {{ color_variant(nav_font_color, 40);
+$color_9: {{ nav_drop_down_font_color;
+$color_10: {{ footer_font_color;
+$color_11: {{ body_font.color;
+$color_12: {{ color_variant(body_font.color, -40);
+$color_13: {{ color_variant(body_font.color, 40);
+$color_14: {{ h2_font.color;
+$color_15: {{ color_variant(h2_font.color, -40);
+$color_16: {{ color_variant(h2_font.color, 40);
+$color_17: {{ anchor_font.color;
+$color_18: {{ color_variant(anchor_font.color, -40);
+$color_19: {{ color_variant(anchor_font.color, 40);
+$font-family_1: {{ body_font.font;
+$background-color_1: {{ primary_color;
+$background-color_2: rgba({{ color_variant(theme.buttons.background.color.color, -40)|convert_rgb;
+$background-color_3: rgba({{ color_variant(theme.buttons.background.color.color, 40)|convert_rgb;
+$background-color_4: {{ table_head_bg_color;
+$background-color_5: {{ table_footer_bg_color;
+$background-color_6: {{ header_bg_color;
+$background-color_7: {{ nav_font_color;
+$background-color_8: {{ footer_bg_color;
+$background-color_9: {{ color_variant(primary_color, -40);
+$background-color_10: {{ color_variant(primary_color, 40);
+$border-top-color_1: {{ nav_font_color;
+$border-top-color_2: {{ color_variant(nav_font_color, -40);
+$border-top-color_3: {{ color_variant(nav_font_color, 40);
+$border-bottom-color_1: {{ theme.header.menu.drop_downs.border.border.top.color;
+$border-bottom-color_2: {{ header_bg_color;
+$border-left-color_1: {{ secondary_color;
+
+/* 1a. Containers */
+/* 1b. Colors */
+/* 1c. Typography */
+/* 1d. Buttons */
+/* 1e. Forms */
+/* 1f. Tables */
+/* 1g. Website header */
+/* 1h. Website footer */
+/* Paragraphs */
+/* Anchors */
+/* Headings */
+/* Blockquote */
+/* Form title */
+/* Labels */
+/* Help text */
+/* Inputs */
+/* Form placeholder text */
+/* Inputs - date picker */
+/* Submit button */
+/* Table */
+/* Table cells */
+/* Table header */
+/* Table footer */
+/* Footer content */
+/* Blog post */
+/* Blog related posts */
+/* Blog comments */
+/* Blog listing */
+/* Blog pagination */
+/* Pricing card */
+/* Social follow */
+.content-wrapper {
+	max-width: {{ container_width;
+}
+}; {
+	} {
+		.dnd-section {
+			padding: {{ dnd_section_padding;
+			>.row-fluid {
+				max-width: {{ container_width;
+			}
+		}
+		blockquote {
+			border-left-color: $border-left-color_1;
+		}
+		.form-title {
+			color: $color_1;
+		}
+		form {
+			label {
+				color: $color_2;
+			}
+			legend {
+				color: $color_3;
+			}
+			input[type=submit] {
+				&:hover {
+					background-color: $background-color_2;
+				}
+				&:active {
+					background-color: $background-color_3;
+				}
+			}
+		}
+		&::-webkit-input-placeholder {
+			color: $color_4;
+		}
+		&::-moz-placeholder {
+			color: $color_4;
+		}
+		&:-ms-input-placeholder {
+			color: $color_4;
+		}
+		&::placeholder {
+			color: $color_4;
+		}
+		.hs-fieldtype-date {
+			.input {
+				.hs-dateinput {
+					&:before {
+						color: $color_4;
+					}
+				}
+			}
+		}
+		.fn-date-picker {
+			td.is-selected {
+				.pika-button {
+					background: {{ primary_color;
+				}
+			}
+			td {
+				.pika-button {
+					&:hover {
+						background-color: $background-color_1;
+					}
+				}
+			}
+		}
+		thead {
+			th {
+				background-color: $background-color_4;
+			}
+		}
+		tfoot {
+			td {
+				background-color: $background-color_5;
+			}
+		}
+		.menu__link {
+			color: $color_6;
+		}
+		.menu__child-toggle-icon {
+			border-top-color: $border-top-color_1;
+			&:hover {
+				border-top-color: $border-top-color_2;
+			}
+			&:active {
+				border-top-color: $border-top-color_3;
+			}
+		}
+		.menu {
+			.menu__link {
+				&:hover {
+					color: $color_7;
+				}
+				&:active {
+					color: $color_8;
+				}
+			}
+			.menu__item--depth-1 {
+				>.menu__link--active-link {
+					&:after {
+						background-color: $background-color_7;
+					}
+				}
+			}
+		}
+		} {
+			.menu__submenu {
+				.menu__link {
+					color: $color_9;
+				}
+			}
+		}
+		.header__language-switcher {
+			.lang_list_class {
+				&:before {
+					border-bottom-color: $border-bottom-color_1;
+				}
+			}
+			.lang_list_class.first-active {
+				&::after {
+					border-bottom-color: $border-bottom-color_2;
+				}
+			}
+		}
+		.menu__submenu {
+			.menu__link {
+				&:hover {
+					background-color: $background-color_6;
+				}
+			}
+		}
+		.header__language-switcher-label-current {
+			font-family: $font-family_1;
+			&:after {
+				border-top-color: $border-top-color_1;
+			}
+		}
+		.footer {
+			p {
+				color: $color_10;
+			}
+		}
+		.blog-post__tag-link {
+			color: $color_11;
+			&:hover {
+				color: $color_12;
+			}
+			&:active {
+				color: $color_13;
+			}
+		}
+		.blog-related-posts__title-link {
+			color: $color_14;
+			&:hover {
+				color: $color_15;
+			}
+			&:active {
+				color: $color_16;
+			}
+		}
+		.blog-comments {
+			margin-bottom: {{ theme.spacing.vertical_spacing;
+		}
+		#comments-listing {
+			.comment-reply-to {
+				&:hover {
+					color: $color_18;
+				}
+				&:active {
+					color: $color_19;
+				}
+			}
+		}
+		.blog-index__post-title-link {
+			color: $color_14;
+			&:hover {
+				color: $color_15;
+			}
+			&:active {
+				color: $color_16;
+			}
+		}
+		.blog-index__post-tag {
+			color: $color_11;
+		}
+		.pagination__link-text {
+			color: $color_11;
+		}
+		.pagination__link {
+			&:hover {
+				.pagination__link-text {
+					color: $color_12;
+				}
+			}
+			&:active {
+				.pagination__link-text {
+					color: $color_13;
+				}
+			}
+		}
+		.pagination__link-icon {
+			svg {
+				fill: {{ body_font.color;
+			}
+		}
+		.card__body {
+			svg {
+				fill: {{ primary_color;
+			}
+		}
+		.social-links__icon {
+			background-color: $background-color_1;
+			&:hover {
+				background-color: $background-color_9;
+			}
+			&:active {
+				background-color: $background-color_10;
+			}
+		}
+	}
+}
+.content-wrapper--vertical-spacing {
+	padding: {{ dnd_section_padding;
+}
+html {
+	font-size: {{ body_font.size ~ body_font.size_unit;
+}
+} {
+	!important; {
+		} {
+			.fn-date-picker {
+				td.is-today {
+					.pika-button {
+						color: $color_5;
+					}
+				}
+			}
+		}
+	}
+	0; {
+		} {
+			.blog-post__meta {
+				a {
+					color: $color_11;
+				}
+			}
+		}
+	}
+}
+form {
+	input[type=submit] {
+		&:focus {
+			background-color: $background-color_2;
+		}
+	}
+	.hs-button {
+		&:hover {
+			background-color: $background-color_2;
+		}
+		&:focus {
+			background-color: $background-color_2;
+		}
+		&:active {
+			background-color: $background-color_3;
+		}
+	}
+}
+.header {
+	background-color: $background-color_6;
+}
+.header__logo {
+	.logo-company-name {
+		color: $color_6;
+	}
+}
+.header__language-switcher-label-current {
+	color: $color_6;
+	&:hover {
+		color: $color_7;
+	}
+	&:focus {
+		color: $color_7;
+	}
+	&:active {
+		color: $color_8;
+	}
+}
+.header__language-switcher {
+	.lang_list_class {
+		li {
+			a {
+				color: $color_6;
+				font-family: $font-family_1;
+				&:focus {
+					color: $color_7;
+				}
+				&:active {
+					color: $color_8;
+				}
+			}
+			&:hover {
+				a {
+					color: $color_7;
+				}
+				background-color: $background-color_6;
+			}
+		}
+	}
+}
+.menu {
+	.menu__link {
+		&:focus {
+			color: $color_7;
+		}
+	}
+}
+.menu__child-toggle-icon {
+	&:focus {
+		border-top-color: $border-top-color_2;
+	}
+}
+.menu__submenu {
+	.menu__link {
+		&:hover {
+			color: $color_9;
+		}
+		&:focus {
+			color: $color_9;
+			background-color: $background-color_6;
+		}
+	}
+}
+.menu__submenu--level-2 {
+	>.menu__item {
+		&:first-child {
+			&:hover {
+				&:before {
+					background-color: $background-color_6;
+				}
+			}
+		}
+		&:first-child.focus {
+			&:before {
+				background-color: $background-color_6;
+			}
+		}
+	}
+}
+; {
+	} {
+		.header__navigation-toggle {
+			svg {
+				fill: {{ nav_font_color;
+			}
+		}
+	}
+}
+.menu-arrow {
+	svg {
+		fill: {{ nav_font_color;
+	}
+}
+.footer {
+	background-color: $background-color_8;
+	h1 {
+		color: $color_10;
+	}
+	h2 {
+		color: $color_10;
+	}
+	h3 {
+		color: $color_10;
+	}
+	h4 {
+		color: $color_10;
+	}
+	h5 {
+		color: $color_10;
+	}
+	h6 {
+		color: $color_10;
+	}
+	label {
+		color: $color_10;
+	}
+	span {
+		color: $color_10;
+	}
+	li {
+		color: $color_10;
+	}
+	img {
+		color: $color_10;
+	}
+}
+.blog-post {
+	padding: {{ theme.spacing.vertical_spacing ~ 'px';
+}
+.blog-header__inner {
+	padding: {{ theme.spacing.vertical_spacing ~ 'px';
+}
+.blog-related-posts {
+	padding: {{ theme.spacing.vertical_spacing ~ 'px';
+}
+.blog-post__tag-link {
+	&:focus {
+		color: $color_12;
+	}
+}
+.blog-related-posts__title-link {
+	&:focus {
+		color: $color_15;
+	}
+}
+}px; {
+	} {
+		#comments-listing {
+			.comment-reply-to {
+				color: $color_17;
+			}
+		}
+	}
+}
+#comments-listing {
+	.comment-reply-to {
+		&:focus {
+			color: $color_18;
+		}
+	}
+}
+.blog-index__post-title-link {
+	&:focus {
+		color: $color_15;
+	}
+}
+.blog-index__post-author-name {
+	color: $color_11;
+}
+.pagination__link--number {
+	color: $color_11;
+	&:hover {
+		color: $color_12;
+	}
+	&:focus {
+		color: $color_12;
+	}
+	&:active {
+		color: $color_13;
+	}
+}
+.pagination__link {
+	&:focus {
+		.pagination__link-text {
+			color: $color_12;
+		}
+	}
+}
+.social-links__icon {
+	&:focus {
+		background-color: $background-color_9;
+	}
+}
+@media max-width: 767px) {
+	.header__navigation {
+		background-color: $background-color_6;
+	}
+}

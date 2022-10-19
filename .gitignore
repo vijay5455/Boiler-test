@@ -1,0 +1,21 @@
+node_modules
+hubspot.config.yml
+.stylelintcache
+.eslintcache
+mix-manifest.json
+
+#assets compiled
+o63-theme/css/app.css
+o63-theme/js/app.js
+o63-theme/modules/**/*.css
+o63-theme/modules/**/*.js
+
+##api ssets
+API/vendor
+API/node_modules
+API/public/.htaccess
+API/.env
+API/.idea
+API/Homestead.json
+API/Homestead.yaml
+API/.phpunit.result.cache

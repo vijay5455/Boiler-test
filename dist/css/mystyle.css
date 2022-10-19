@@ -1,0 +1,22 @@
+$color_1: #494a5278;
+&::placeholder {
+	color: $color_1;
+}
+input[type=text] {
+	border: 2px solid #505050 !important;
+	padding: 0px 10px;
+}
+.topsearch {
+	margin-top: 2%;
+	width: 29%;
+	float: right;
+	margin-right: 16px;
+}
+.header {
+	background: #0000000f;
+	box-shadow: 0px 2px 4px #80808061;
+}
+.footer {
+	background: #0000000f;
+	box-shadow: 0 2px 4px #80808061;
+}
